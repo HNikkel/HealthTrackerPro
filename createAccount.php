@@ -1,6 +1,7 @@
 <?php
+
 if (isset($_POST['submit'])) { // if page is not submitted to itself echo the form
-    $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "HealthTrackerPro");
+    $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
 
     if (mysqli_connect_errno()) {
         printf("Connect failed: %s\n", mysqli_connect_error());
@@ -13,7 +14,8 @@ if (isset($_POST['submit'])) { // if page is not submitted to itself echo the fo
         $res = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
         if (mysqli_num_rows($res) == 0) {
-            $sql = "INSERT INTO `Users` (`Username`, `Password`) VALUES ('".$_Post["username"]."', SHA1('".$_Post["username"]."'));";
+
+            $sql = "INSERT INTO `Users` (`Username`, `Password`) VALUES ('".$_POST["username"]."', SHA1('".$_POST["password"]."'));";
 
             $res = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
@@ -55,8 +57,8 @@ if (isset($_POST['submit'])) { // if page is not submitted to itself echo the fo
                 <form action="<?php echo $PHP_SELF; ?>" method="POST" id="form">
                     <h1>Registration</h1>
                     <div class="input-control">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text">
+                        <label for="username">Name</label>
+                        <input id="username" name="username" type="text">
                         <div class="error"></div>
                     </div>
                      

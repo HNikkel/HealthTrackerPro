@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if ((!filter_input(INPUT_POST, 'username')) || (!filter_input(INPUT_POST, 'password'))) {
 
     header("Location: login.php");
@@ -7,7 +8,7 @@ if ((!filter_input(INPUT_POST, 'username')) || (!filter_input(INPUT_POST, 'passw
 }
 
 
-$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "HealthTrackerPro");
+$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
 
 $targetname = filter_input(INPUT_POST, 'username');
 $targetpasswd = filter_input(INPUT_POST, 'password');
