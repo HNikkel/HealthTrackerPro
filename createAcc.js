@@ -1,44 +1,21 @@
 const form = document.getElementById('form');
-const name = document.getElementById('name');
-const stu_id = document.getElementById('stu_id');
-const Year = document.getElementById('Year');
+const username = document.getElementById('username');
 const password = document.getElementById('password');
 
 form.addEventListener('submit', e => {
 
 
-    const nameValue = name.value.trim();
-    const stu_idValue = stu_id.value.trim();
+    const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
-    const yearValue = Year.value.trim();
 
 
 
-    if (nameValue === '') {
-        setError(name, 'Username is required');
+    if (usernameValue === '') {
+        setError(username, 'Username is required');
         e.preventDefault();
     } else {
-        setSuccess(name);
+        setSuccess(username);
 
-    }
-
-    if (stu_idValue === '') {
-        setError(stu_id, 'Student ID is required');
-        e.preventDefault();
-    } else if (stu_idValue.length < 9) {
-        setError(stu_id, 'StudentID must be at least 9 characters.')
-        e.preventDefault();
-    } else {
-        setSuccess(stu_id);
-    }
-
-
-
-    if (yearValue === '') {
-        setError(Year, 'Year is required');
-        e.preventDefault();
-    } else {
-        setSuccess(Year);
     }
 
     if (passwordValue === '') {

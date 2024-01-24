@@ -1,22 +1,22 @@
 const form = document.getElementById('form');
-const stu_id = document.getElementById('stu_id');
+const username = document.getElementById('username');
 const password = document.getElementById('password');
 
 form.addEventListener('submit', e => {
 
 
-    const stu_idValue = stu_id.value.trim();
+    const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
 
 
-    if (stu_idValue === '') {
-        setError(stu_id, 'Student ID is required');
+    if (usernameValue === '') {
+        setError(username, 'Username is required');
         e.preventDefault();
-    } else if (stu_idValue.length < 9) {
-        setError(stu_id, 'Invalid Student ID.')
+    } else if (usernameValue.length < 5) {
+        setError(username, 'Invalid Username')
         e.preventDefault();
     } else {
-        setSuccess(stu_id);
+        setSuccess(username);
     }
 
 

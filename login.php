@@ -1,10 +1,7 @@
-
 <html lang="en">
     <head>
-        
         <link rel="stylesheet" href="./style.css">
-        <script defer src="./loginJS.js"></script>
-        
+        <script defer src="./LoginJS.js"></script>
     </head>
     <body>
         <div class="container">
@@ -12,22 +9,26 @@
                 <h1>HealthTrackerPro Login</h1>
                 <div class="input-control">
                     <label for="username">Username</label>
-                    <input id="username" name="username" >
+                    <input id="username" name="username">
                     <div class="error"></div>
                 </div>
 
                 <div class="input-control">
                     <label for="password">Password</label>
-                    <input id="password"name="password" type="password">
+                    <input id="password" name="password" type="password">
                     <div class="error"></div>
                 </div>
-             
-                <button onclick="window.location.href='createAccount.php'">Create Account</button>
+
+                <button type="button" onclick="redirect()">Create Account</button>
                 <button type="submit" name="submit">Login</button>
             </form>
-             
-            
-
         </div>
+
+        <script>
+            function redirect() {
+                window.location.href = 'createAccount.php';
+            }
+        </script>
+        
     </body>
 </html>
