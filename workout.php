@@ -14,8 +14,8 @@
         <title>Workout Tracker</title>
         <style>
             body{
-                background-color: #99ff99; 
-                font-family: 'Trebuchet MS', sans-serif;
+                background-color: lightgrey; 
+                font-family: times;
             }
             form, div, table{
                 text-align: center;
