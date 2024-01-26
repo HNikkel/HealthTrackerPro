@@ -19,16 +19,10 @@
                     <div class="error"></div>
                 </div>
 
-                <button type="button" onclick="redirect()">Create Account</button>
+                <button type="button" onclick="window.location.href = 'createAccount.php'">Create Account</button>
                 <button type="submit" name="submit">Login</button>
             </form>
         </div>
-
-        <script>
-            function redirect() {
-                window.location.href = 'createAccount.php';
-            }
-        </script>
         
     </body>
 </html>
