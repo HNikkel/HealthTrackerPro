@@ -20,7 +20,8 @@ $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
 if (mysqli_num_rows($result) == 1) {
 
-
+    $_SESSION["username"] = $_POST["username"];
+    $_SESSION["password"] = $_POST["password"];
     setcookie("auth", session_id(), time() + 60 * 30, "/", "", 0);
 } else {
 
@@ -57,7 +58,11 @@ if (mysqli_num_rows($result) == 1) {
                <img src=”profile-picture.png”>
                <p>About the author</p>
             </div>  
-         </div>        
+         </div>
+         <div class="links">
+             <h1>Health Tracker Link</h1>
+             <a href="workout.php">Click Here</a>
+         </div>
       </main>
       <footer>
          <a href=”twitter.com/author”>Twitter</a>
