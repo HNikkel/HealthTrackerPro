@@ -7,15 +7,18 @@ if (isset($_POST['submit'])) {
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
     } else {
-        $stu = strtolower($_POST["username"]);
+
+ 
+        $username = strtolower("julian");
+        $password = strtolower($_POST["password"]);
 
         $sql = "SELECT * FROM Users "
-                . "WHERE username = '" . $_POST["username"] . "';";
+                . "WHERE username = '" . $username . "';";
         $res = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
         if (mysqli_num_rows($res) == 0) {
 
-            $sql = "INSERT INTO `Users` (`Username`, `Password`) VALUES ('".$_POST["username"]."', SHA1('".$_POST["password"]."'));";
+            $sql = "INSERT INTO `Users` (`Username`, `Password`) VALUES ('".$username."', SHA1('".$password."'));";
 
             $res = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
@@ -35,6 +38,7 @@ if (isset($_POST['submit'])) {
 
             mysqli_close($mysqli);
         } else {
+             
             echo "<head>        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
             <link rel='stylesheet' href='./Style2.css'></head>"
             . "<body style='background-color: lightgray'>"
