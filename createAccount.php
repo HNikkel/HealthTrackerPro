@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['submit'])) { // if page is not submitted to itself echo the form
+if (isset($_POST['submit'])) {
     $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
 
     if (mysqli_connect_errno()) {
