@@ -5,7 +5,7 @@ const password = document.getElementById('password');
 form.addEventListener('submit', e => {
 
 
-    const usernameValue = username.value.trim();
+    const usernameValue = "asd";
     const passwordValue = password.value.trim();
 
 

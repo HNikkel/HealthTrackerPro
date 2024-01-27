@@ -6,10 +6,10 @@
         $height = (int)$_POST["height"];
         $weight = (int)$_POST["weight"];
 
-
         if($gender == "male"){
             $BMR = 66.47 + (13.75 * $weight) + (5.003 * $height) - (6.755 * $age);
         }
+        
 
         if($$gender == "female"){
             $BMR = 655.1 + (9.563 * $weight) + (1.85 * $height) - (4.676 * $age);
@@ -31,12 +31,11 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
     <title>Maintenance Calorie Calculator</title>
+
 </head>
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
