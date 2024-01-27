@@ -122,8 +122,9 @@ if (mysqli_num_rows($result) == 1) {
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li><a href="calorieCalculator.php">Calorie Calculator</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="workout.php">Workout Tracker</a></li>
+            <li><a href="goals.php">Manage Goals</a></li>
          </ul>
       </nav>
       <main>
