@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) == 1) {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('dumbell.jpg'); 
+            background-image: url('dumbell2.jpg'); 
             background-size: cover;
          }
 
@@ -111,33 +111,60 @@ if (mysqli_num_rows($result) == 1) {
             bottom: 0;
             width: 100%;
          }
+		header {
+            position: relative; /* Added position property for absolute positioning */
+         }
+
+         .user-nav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+         }
+
+         .user-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+         }
+
+         /* Adjusted header padding to make space for user-nav */
+         header {
+            padding: 20px 10px; 
+         }
       </style>
    </head> 
    <body>
-      <header>   
+      <header> 
+	  <div class="user-nav">
+            <a href="login.php">Login</a>
+            <a href="createAccount.php">Sign Up</a>
+         </div>
          <h1>Health Tracker Pro</h1>
       </header>
       <nav>
          <ul>
             <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact Us</a></li>
             <li><a href="calorieCalculator.php">Calorie Calculator</a></li>
             <li><a href="workout.php">Workout Tracker</a></li>
+			<li><a href="goals.php">Goals</a></li>
+			<li><a href="reviews.php">Reviews</a></li>
          </ul>
       </nav>
       <main>
          <div class="row">
             <div class="post-text-box">
-               <h1>Welcome</h1>
+               <h1>Welcome!</h1>
                <section>
-                  <h1>First Post</h1>
-                  <p>The first post’s content</p>
+                  
+                  <h2>Health Tracker Pro is a website which lets you track your progress in your workouts</h2>
                </section>
             </div>
             <div class="profile">
-               <h1>About This Website</h1>
-               <p>Health Tracker Pro is a website which lets you track your progress in your workouts</p>
+               <h1>How to Use?</h1>
+               <h2>Head on over to the Calorie Calculator to enter the required details.</h2>
+			   <h2>Head on over to the Workout Tracker to track your workouts.</h2>
             </div>  
          </div>        
       </main>
