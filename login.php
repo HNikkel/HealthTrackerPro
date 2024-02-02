@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="./style.css">
-        <script defer src="./LoginJS.js"></script>
+        <script defer src="./LoginJs.js"></script>
     </head>
     <body>
         <div class="container">
