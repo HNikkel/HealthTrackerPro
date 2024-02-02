@@ -5,14 +5,14 @@ const password = document.getElementById('password');
 form.addEventListener('submit', e => {
 
 
-    const usernameValue = "asd";
+    const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
 
 
     if (usernameValue === '') {
         setError(username, 'Username is required');
         e.preventDefault();
-    } else if (usernameValue.length < 5) {
+    } else if (username < 5) {
         setError(username, 'Invalid Username')
         e.preventDefault();
     } else {
