@@ -64,7 +64,7 @@
 
     setInterval(function() {
         showExercisePopup();
-    }, 60000); // 1 minute interval
+    }, 120000); // 2 minute interval
 
     function toggleExercisePopup(shouldShow) {
     const displayValue = shouldShow ? 'block' : 'none';
