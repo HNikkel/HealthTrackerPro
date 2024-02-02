@@ -1,4 +1,5 @@
-<?php session_start() ?>
+<?php session_start();
+include('prompts.php'); //added prompts ?> 
 <!DOCTYPE html>
 <html>
     <head>

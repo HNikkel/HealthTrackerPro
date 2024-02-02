@@ -1,105 +1,98 @@
 body {
-    background: lightgray;
-    font-family: times;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('dumbell2.jpg'); 
+  background-size: cover;
 }
 
-#form {
-    width: 300px;
-    margin: 20vh auto 0 auto;
-    padding: 40px;
-    background-color: white;
-    border-radius: 4px;
-    font-size: 12px;
-}
-
-#form h1 {
-    text-align: center;
-}
-
-#form button  {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    color: white;
-    background-color: green;
-    border: none;
-    border-radius: 4px;
-}
-
-.input-control {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-control input {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    font-size: 12px;
-    padding: 10px;
-    width: 100%;
-}
-
-.input-control .error {
-    color: red;
-    font-size: 9px;
-    height: 13px;
-}
-
-/*header style*/
 header {
-    text-align: center; 
-    padding: 20px;
- }
- ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  .active {
-    background-color: #04AA6D;
-  }
- /*creating the two-column layout*/
- *{
-    box-sizing: border-box;
- }
- .row {
-    display: flex;
-    flex-wrap: wrap;
- }
- .post-text-box {
-    flex: 70%;
-    padding: 20px;
- }
- .profile {
-    flex: 70%;
-    padding: 20px;
- }
- /*profile image and heading style*/
- .profile img {
-    width: 120px;
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
- }
- .profile h1 {
-    text-align: center;
- }
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #444;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+li a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+  color: #333; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px; 
+  margin: auto; 
+  max-width: 800px; 
+  min-height: 100vh; 
+  box-sizing: border-box; 
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-text-box {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+header {
+  position: relative; /* Added position property for absolute positioning */
+}
+
+.user-nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Adjusted header padding to make space for user-nav */
+header {
+  padding: 20px 10px; 
+}

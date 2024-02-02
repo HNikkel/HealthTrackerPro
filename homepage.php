@@ -1,11 +1,14 @@
 <?php
+
 session_start();
+include('prompts.php'); //added prompts!
 
 if ((!filter_input(INPUT_POST, 'username')) || (!filter_input(INPUT_POST, 'password'))) {
 
     header("Location: login.php");
     exit;
 }
+
 
 
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
@@ -34,106 +37,6 @@ if (mysqli_num_rows($result) == 1) {
    <head>
       <title>HealthTrackerPro</title>
       <link rel="stylesheet" href="style.css">
-      <style>
-         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('dumbell2.jpg'); 
-            background-size: cover;
-         }
-
-         header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-         }
-
-         nav {
-            text-align: center;
-         }
-
-         ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #444;
-            width: 100%;
-            display: flex;
-            justify-content: center; 
-         }
-
-         li {
-            display: inline;
-         }
-
-         li a {
-            display: inline-block;
-            color: #fff;
-            text-decoration: none;
-            padding: 14px 16px;
-         }
-
-         li a:hover {
-            background-color: #555;
-         }
-
-         main {
-            padding: 20px;
-            text-align: center;
-            color: #333; 
-            background-color: rgba(255, 255, 255, 0.8); 
-            border-radius: 10px; 
-            margin: auto; 
-            max-width: 800px; 
-            min-height: 100vh; 
-            box-sizing: border-box; 
-         }
-
-         .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         }
-
-         .post-text-box {
-            padding: 20px;
-         }
-
-         footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-         }
-		header {
-            position: relative; /* Added position property for absolute positioning */
-         }
-
-         .user-nav {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            display: flex;
-            align-items: center;
-         }
-
-         .user-nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 10px;
-         }
-
-         /* Adjusted header padding to make space for user-nav */
-         header {
-            padding: 20px 10px; 
-         }
-      </style>
    </head> 
    <body>
       <header> 

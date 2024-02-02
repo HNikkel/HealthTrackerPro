@@ -1,4 +1,5 @@
 <?php session_start();
+include('prompts.php'); //added prompts
     if(isset($_POST["username"])){
         $_SESSION["username"] = $_POST["username"];
     }
@@ -14,9 +15,82 @@
         <title>Workout Tracker</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <style>
-            form, div, table, tr{
-                text-align: center;
-            }
+            
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('dumbell2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #form a {
+            text-decoration: none;
+            color: #333;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #form a:hover {
+            background-color: #bbb;
+        }
         </style>
     </head>
 <?php
@@ -111,13 +185,10 @@
             <input type="number" name="workoutSets"><br><br>
             <span>Workout Reps:</span><br><br>
             <input type="number" name="workoutReps"><br><br>
-            <h3>(click here to view workouts if fields are blank...)</h3>
             <input type="submit" name="Submit">
         </form>
         
-        <div id="form">
-        <a href="index.html">Return To Index</a>
-        </div>
+        
     </body>
 </html>
 <?php
