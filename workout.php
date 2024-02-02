@@ -98,7 +98,7 @@ include('prompts.php'); //added prompts
         
         if($_POST['workoutName'] === "" && $_POST['workoutSets'] === "" && $_POST['workoutReps'] === ""){
         
-            $connect = mysqli_connect("localhost", "cs213user", "letmein", "healthtrackerpro");
+            $connect = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
 
             $query = "SELECT * FROM Workouts WHERE username = '".$_SESSION["username"]."'";
             $result = mysqli_query($connect, $query) or die(mysqli_error($connect));
@@ -136,7 +136,7 @@ include('prompts.php'); //added prompts
         $workoutSets = $_POST['workoutSets'];
         $workoutReps = $_POST['workoutReps'];
         
-        $connect = mysqli_connect("localhost", "cs213user", "letmein", "healthtrackerpro");
+        $connect = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
         $query = "INSERT INTO Workouts VALUES ('".$username."', '".$workoutName."', ".$workoutSets.", ".$workoutReps.")";
         $result = mysqli_query($connect, $query) or die(mysqli_error($connect));
         
