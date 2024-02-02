@@ -11,7 +11,9 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
 // Check if form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["addGoal"])) {
+    
     $username = $_SESSION["username"];
     $description = $mysqli->real_escape_string($_POST["description"]);
     $completionDate = $mysqli->real_escape_string($_POST["completionDate"]);

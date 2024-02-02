@@ -116,7 +116,7 @@
         </form>
         
         <div id="form">
-        <a href="index.html">Return To Index</a>
+        <a href="homepage.php">Return To Index</a>
         </div>
     </body>
 </html>
