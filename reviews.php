@@ -23,7 +23,7 @@
         
         if($_POST['reviewTitle'] === "" || $_POST['reviewBody'] === "" || $_POST['reviewNum'] === ""){
         
-            $connect = mysqli_connect("localhost", "cs213user", "letmein", "healthtrackerpro");
+            $connect = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
 
             $query = "SELECT * FROM Reviews";
             $result = mysqli_query($connect, $query) or die(mysqli_error($connect));
@@ -99,7 +99,7 @@
         $body = $_POST['reviewBody'];
         $num = $_POST['reviewNum'];
         
-        $connect = mysqli_connect("localhost", "cs213user", "letmein", "healthtrackerpro");
+        $connect = mysqli_connect("localhost", "cs213user", "letmein", "HealthTracker");
         $query = 'INSERT INTO Reviews VALUES ("'.$title.'", "'.$body.'", '.$num.')';
         $result = mysqli_query($connect, $query) or die(mysqli_error($connect));
         
